@@ -3,11 +3,10 @@ const React = require('react')
 function renderApplicant (data) {
   const color = data.hasPassed ? 'green' : 'black'
   return (
-    <li key={data.id} style={{color: color}}>
-      {data.email}
-      -
-      {data.id}
-    </li>
+    <tr key={data.id} style={{color: color}}>
+      <td>{data.id}</td>
+      <td>{data.email}</td>
+    </tr>
   )
 }
 
@@ -15,9 +14,17 @@ function ApplicantList (props) {
   return (
     <div>
       <h1>Applicants</h1>
-      <ul>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
         {props.applicants.map(renderApplicant)}
-      </ul>
+        </tbody>
+      </table>
     </div>
   )
 }

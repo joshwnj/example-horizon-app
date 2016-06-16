@@ -2,8 +2,9 @@
   "name": "auto-exam",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "start": "hz serve --dev",
     "webpack": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,13 +21,7 @@
     "webpack": "^1.13.1"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0",
-    "react-redux": "^4.4.5",
-    "react-router": "^2.4.1",
-    "react-router-redux": "^4.0.5",
-    "redux": "^3.5.2",
-    "rethinkdb": "^2.3.2"
+    "react-dom": "^15.1.0"
   }
 }
